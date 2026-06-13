@@ -1,9 +1,129 @@
 <!DOCTYPE html>
-  <html>
-  <head><title>TeachBest</title></head>
-  <body>
-    <h1>TeachBest</h1>
-    <p>AP revision resources for students.</p>
-    <p><a href="/privacy.html">Privacy Policy</a> · <a href="/contact.html">Contact Us</a></p>
-  </body>
-  </html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TeachBest — Classroom-ready resources, ready to teach</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+<header>
+  <div class="site-header">
+    <a class="brand" href="/">
+      <span class="brand-mark" aria-hidden="true"></span>
+      <span class="brand-name">TeachBest</span>
+    </a>
+    <nav class="header-links">
+      <a href="#how-it-works">How it works</a>
+      <a href="/contact.html">Contact</a>
+    </nav>
+  </div>
+</header>
+
+<main class="page">
+
+  <!-- HERO -->
+  <section class="hero">
+    <span class="eyebrow">Materials for every educator</span>
+    <h1>Classroom-ready resources, ready to teach.</h1>
+    <p class="lead">Lesson plans, worksheets, slide decks, and assessments you can actually trust — unlock exactly what you need with tokens. No subscription, no clutter.</p>
+
+    <div class="wa-card">
+      <div class="wa-qr" id="waQr"></div>
+      <div class="wa-info">
+        <span class="wa-eyebrow">Scan to start</span>
+        <h3 class="wa-title">Message us on WhatsApp</h3>
+        <p class="wa-sub">Point your phone camera at the code to open a chat — we'll help you find the right materials.</p>
+        <a class="btn btn-primary" id="waLink" href="https://wa.me/447000000000?text=Hi+TeachBest%21+I%27d+like+to+learn+more+about+your+teaching+materials." target="_blank" rel="noopener">Open WhatsApp</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS -->
+  <section class="how" id="how-it-works">
+    <div class="how-inner">
+      <div class="how-head">
+        <span class="eyebrow">How it works</span>
+        <h2>Pay only for what you teach.</h2>
+        <p class="how-lead">TeachBest runs on tokens instead of a monthly fee — so you only spend on the materials you actually use.</p>
+      </div>
+
+      <div class="steps">
+        <div class="step">
+          <div class="step-n">01</div>
+          <h3>Top up your tokens</h3>
+          <p>Buy a token pack once — no subscription, no auto-renewal. Tokens never expire, so you spend at your own pace.</p>
+        </div>
+        <div class="step">
+          <div class="step-n">02</div>
+          <h3>Browse &amp; preview</h3>
+          <p>Search thousands of standards-aligned materials by subject, grade, and type. Preview every page before you commit a single token.</p>
+        </div>
+        <div class="step">
+          <div class="step-n">03</div>
+          <h3>Unlock &amp; teach</h3>
+          <p>Spend tokens to download fully editable files — slides, docs, and PDFs ready to adapt and bring straight into class.</p>
+        </div>
+      </div>
+
+      <div class="how-cta">
+        <a class="btn btn-primary" id="waLinkCta" href="https://wa.me/447000000000?text=Hi+TeachBest%21+I%27d+like+to+learn+more+about+your+teaching+materials." target="_blank" rel="noopener">Message us on WhatsApp</a>
+        <a class="btn btn-ghost" href="#how-it-works">See token packs</a>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="site-footer">
+    <div class="footer-top">
+      <div>
+        <a class="brand" href="/">
+          <span class="brand-mark" aria-hidden="true"></span>
+          <span class="brand-name">TeachBest</span>
+        </a>
+        <p class="footer-tagline">Trusted teaching materials, unlocked with tokens.</p>
+      </div>
+      <div class="footer-cols">
+        <div class="footer-col">
+          <h4>Service</h4>
+          <a href="#how-it-works">How it works</a>
+          <a href="#how-it-works">Token packs</a>
+        </div>
+        <div class="footer-col">
+          <h4>Support</h4>
+          <a href="/contact.html">Contact us</a>
+        </div>
+        <div class="footer-col">
+          <h4>Legal</h4>
+          <a href="/privacy.html">Privacy policy</a>
+        </div>
+      </div>
+    </div>
+    <div class="footer-base">© 2026 TeachBest · Made for educators</div>
+  </div>
+</footer>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+<script>
+  // Update waNumber with the real WhatsApp number (digits only, with country code)
+  var waNumber = '447000000000';
+  var waMessage = encodeURIComponent('Hi TeachBest! I\'d like to learn more about your teaching materials.');
+  var waUrl = 'https://wa.me/' + waNumber + '?text=' + waMessage;
+
+  document.getElementById('waLink').href = waUrl;
+  document.getElementById('waLinkCta').href = waUrl;
+
+  new QRCode(document.getElementById('waQr'), {
+    text: waUrl,
+    width: 184, height: 184,
+    colorDark: 'oklch(0.55 0.145 258)',
+    colorLight: '#ffffff',
+    correctLevel: QRCode.CorrectLevel.M
+  });
+</script>
+
+</body>
+</html>
