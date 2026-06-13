@@ -16,15 +16,7 @@
     <h1>Classroom-ready resources, ready to teach.</h1>
     <p class="lead">Lesson plans, worksheets, slide decks, and assessments you can actually trust — unlock exactly what you need with tokens. No subscription, no clutter.</p>
 
-    <div class="wa-card">
-      <div class="wa-qr" id="waQr"></div>
-      <div class="wa-info">
-        <span class="wa-eyebrow">Scan to start</span>
-        <h3 class="wa-title">Message us on WhatsApp</h3>
-        <p class="wa-sub">Point your phone camera at the code to open a chat — we'll help you find the right materials.</p>
-        <a class="btn btn-primary" id="waLink" href="https://wa.me/447000000000?text=Hi+TeachBest%21+I%27d+like+to+learn+more+about+your+teaching+materials." target="_blank" rel="noopener">Open WhatsApp</a>
-      </div>
-    </div>
+    <a class="btn btn-primary" id="waLink" href="https://wa.me/447000000000?text=Hi+TeachBest%21+I%27d+like+to+learn+more+about+your+teaching+materials." target="_blank" rel="noopener">Message us on WhatsApp</a>
   </section>
 
   <!-- HOW IT WORKS -->
@@ -93,24 +85,6 @@
   </div>
 </footer>
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script>
-  // Update waNumber with the real WhatsApp number (digits only, with country code)
-  var waNumber = '447000000000';
-  var waMessage = encodeURIComponent('Hi TeachBest! I\'d like to learn more about your teaching materials.');
-  var waUrl = 'https://wa.me/' + waNumber + '?text=' + waMessage;
-
-  document.getElementById('waLink').href = waUrl;
-  document.getElementById('waLinkCta').href = waUrl;
-
-  new QRCode(document.getElementById('waQr'), {
-    text: waUrl,
-    width: 184, height: 184,
-    colorDark: '#3f6fd6',
-    colorLight: '#ffffff',
-    correctLevel: QRCode.CorrectLevel.M
-  });
-</script>
 
 </body>
 </html>
